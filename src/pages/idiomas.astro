@@ -1,0 +1,79 @@
+---
+import CvLayout from '../layouts/cvLayout.astro'
+---
+
+<CvLayout>
+  <title slot="titulo">CV — Idiomas</title>
+
+  <h1 class="mt-6 flex flex-wrap items-center justify-center gap-2 text-center text-2xl font-bold text-neutral-900 md:text-3xl">
+    Idiomas que hablo
+  </h1>
+
+  <p class="mt-4 text-center">
+    Francés (nativo), inglés, español y dialectos de Camerún.
+    <strong>Haz clic en el mapa</strong> para ver idiomas por país.
+  </p>
+
+  <figure class="m-0 p-2 text-center">
+    <img
+      src="/img/world.svg"
+      usemap="#image-map"
+      width="2000"
+      height="857"
+      alt="Mapa del mundo"
+      class="mx-auto my-3 block h-auto w-full max-w-5xl"
+    />
+    <figcaption class="mt-1 text-sm text-purple-900">
+      Fuente:
+      <a
+        href="https://simplemaps.com/resources/svg-world"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-purple-900 underline underline-offset-2 hover:text-purple-950"
+      >
+        SimpleMaps - Mapa del mundo SVG
+      </a>
+    </figcaption>
+  </figure>
+
+  <map name="image-map">
+    <area target="_self" alt="España" title="España" href="#espana" coords="988,228,941,221,947,238,956,260,981,253" shape="poly" />
+    <area target="_self" alt="Camerún" title="Camerún" href="#camerun" coords="1033,418,1078,492" shape="rect" />
+    <area target="_self" alt="Francia" title="Francia" href="#francia" coords="935,195,1025,280" shape="rect" />
+    <area target="_self" alt="Inglaterra" title="Inglaterra" href="#inglaterra" coords="890,150,990,235" shape="rect" />
+  </map>
+
+  <section id="espana" class="detalle-pais border-b border-neutral-300 px-5 py-5 text-left target:scroll-mt-4 target:border-l-4 target:border-l-neutral-800 target:bg-neutral-100 target:pl-4" tabindex="-1">
+    <h2 class="mb-2 text-left text-2xl font-bold text-neutral-900">España</h2>
+    <p class="text-left"><strong>Idiomas:</strong> español (oficial), catalán, gallego y euskera.</p>
+  </section>
+
+  <section id="camerun" class="detalle-pais border-b border-neutral-300 px-5 py-5 text-left target:scroll-mt-4 target:border-l-4 target:border-l-neutral-800 target:bg-neutral-100 target:pl-4" tabindex="-1">
+    <h2 class="mb-2 text-left text-2xl font-bold text-neutral-900">Camerún</h2>
+    <p class="text-left"><strong>Idiomas:</strong> francés e inglés (oficiales); además hay cientos de lenguas locales.</p>
+  </section>
+
+  <section id="francia" class="detalle-pais border-b border-neutral-300 px-5 py-5 text-left target:scroll-mt-4 target:border-l-4 target:border-l-neutral-800 target:bg-neutral-100 target:pl-4" tabindex="-1">
+    <h2 class="mb-2 text-left text-2xl font-bold text-neutral-900">Francia</h2>
+    <p class="text-left"><strong>Idiomas:</strong> francés (oficial).</p>
+  </section>
+
+  <section id="inglaterra" class="detalle-pais border-b border-neutral-300 px-5 py-5 text-left target:scroll-mt-4 target:border-l-4 target:border-l-neutral-800 target:bg-neutral-100 target:pl-4" tabindex="-1">
+    <h2 class="mb-2 text-left text-2xl font-bold text-neutral-900">Inglaterra</h2>
+    <p class="text-left"><strong>Idiomas:</strong> inglés (oficial).</p>
+  </section>
+
+  <p class="mt-4 mb-8 text-center text-xs text-neutral-600">
+    Coordenadas creadas con:
+    <a href="https://www.image-map.net/" target="_blank" rel="noopener noreferrer" class="text-purple-900 underline">
+      image-map.net
+    </a>
+  </p>
+
+  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof imageMapResize === 'function') imageMapResize();
+    });
+  </script>
+</CvLayout>

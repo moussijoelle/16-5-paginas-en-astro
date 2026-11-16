@@ -1,0 +1,51 @@
+---
+import CvLayout from '../layouts/cvLayout.astro'
+---
+
+<CvLayout>
+  <title slot="titulo">CV — Educación</title>
+
+  <table class="my-4 w-full border-collapse border-4 border-yellow-700">
+    <caption class="my-4 text-center text-xl font-bold text-black">
+      Educación Formal
+    </caption>
+    <thead>
+      <tr>
+        <th class="border border-purple-900 bg-purple-900 p-1 text-center text-xl leading-tight text-white">Nivel</th>
+        <th class="border border-purple-900 bg-purple-900 p-1 text-center text-xl leading-tight text-white">Mención</th>
+        <th class="border border-purple-900 bg-purple-900 p-1 text-center text-xl leading-tight text-white">Centro</th>
+        <th class="border border-purple-900 bg-purple-900 p-1 text-center text-xl leading-tight text-white align-middle">Año</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="border border-purple-900 bg-yellow-300 p-1">
+          <strong>Bachillerato en Humanidades - Filosofía</strong>
+        </td>
+        <td rowspan="3" class="border border-purple-900 bg-purple-50 p-1 align-middle text-center">
+          <div class="mx-auto flex max-w-56 flex-col gap-2 border-2 border-yellow-700 bg-purple-50 p-2">
+            <span class="block border border-purple-900 bg-white px-3 py-2 text-center leading-snug">Filosofía</span>
+            <span class="block border border-purple-900 bg-white px-3 py-2 text-center leading-snug">Bellas Artes</span>
+            <span class="block border border-purple-900 bg-white px-3 py-2 text-center leading-snug">Artístico</span>
+          </div>
+        </td>
+        <td class="border border-purple-900 bg-purple-50 p-1">Lycée Bilingue de Nylon Brazzaville</td>
+        <td class="border border-purple-900 bg-purple-50 p-1 text-center align-middle">(2010 - 2012)</td>
+      </tr>
+      <tr>
+        <td class="border border-purple-900 bg-purple-50 p-1">
+          <strong>Licenciatura:</strong> (Doble Grado en Estudios Franceses e Ingleses)
+        </td>
+        <td class="border border-purple-900 bg-purple-50 p-1">University of Buea</td>
+        <td class="border border-purple-900 bg-purple-50 p-1 text-center align-middle">(2012 - 2016)</td>
+      </tr>
+      <tr>
+        <td class="border border-purple-900 bg-purple-50 p-1">
+          <strong>Grado superior:</strong> (Diseño de Moda)
+        </td>
+        <td class="border border-purple-900 bg-purple-50 p-1">Escola de la Dona - Espai Francesca Bonnemaison, Barcelona</td>
+        <td class="border border-purple-900 bg-yellow-300 p-1 text-center align-middle">(2018 - 2020)</td>
+      </tr>
+    </tbody>
+  </table>
+</CvLayout>

@@ -1,0 +1,24 @@
+---
+import CvLayout from '../layouts/cvLayout.astro'
+---
+
+<CvLayout>
+  <title slot="titulo">CV — Softskills</title>
+
+  <h1 class="mt-6 flex flex-wrap items-center justify-center gap-2 text-center text-2xl font-bold text-neutral-900">
+    Softskills
+  </h1>
+
+  <video
+    width="600"
+    height="400"
+    controls
+    autoplay
+    muted
+    playsinline
+    class="mx-auto mt-2 mb-8 block h-auto w-full max-w-xl"
+  >
+    <source src="/Video-cv.mp4" type="video/mp4" />
+    Tu navegador no soporta el formato de video.
+  </video>
+</CvLayout>
